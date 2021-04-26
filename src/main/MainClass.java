@@ -1,7 +1,5 @@
 package main;
-import java.util.Scanner;
-import model.ArvoreAVL;
-import model.No;
+
 import util.Menu;
 
 /**

@@ -208,9 +208,9 @@ public class ArvoreAVL {
 	}
 
     final protected ArrayList<No> inorder() {
-		ArrayList<No> ino = new ArrayList<No>();
-		inorder(raiz, ino);
-		return ino;
+		ArrayList<No> no = new ArrayList<No>();
+		inorder(raiz, no);
+		return no;
 	}
 
     final protected void inorder(No no, ArrayList<No> lista) {

@@ -22,6 +22,7 @@ public void menuArvore (){
     
         Funcao funcao = new Funcao();
     
+    do{    
         System.out.println(" MENU ");
         System.out.println("");
         System.out.println("1 - Inserir os valores dos nós");
@@ -30,10 +31,16 @@ public void menuArvore (){
         System.out.println("4 - Imprimir valores da árvore em pré ordem");
         System.out.println("5 - Imprimir valores da árvore em pós ordem");
         System.out.println("6 - Imprimir valores da árvore em ordem");
-        System.out.println("");
+        System.out.println("0 - Sair");
         
+        System.out.print("Informe o valor : ");
         value = scan.nextInt();
+       
+        
         switch(value){
+            case 0:
+                System.exit(0);
+          
             case 1:      
                 funcao.inserir();
                 break;
@@ -50,6 +57,9 @@ public void menuArvore (){
             
                 break;
         }
+            
+        } while(value != 0 || value > 6 );
+    
 }
     
 }
