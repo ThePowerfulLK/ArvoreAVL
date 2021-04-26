@@ -19,7 +19,7 @@ public void menuArvore (){
     
     
     Scanner scan = new Scanner(System.in);
-    int value;
+    int value = 0;
     
         Funcao funcao = new Funcao();
     
@@ -41,28 +41,25 @@ public void menuArvore (){
         
         switch(value){
             case 0:
-                funcao.inserirRandom();
+                funcao.inserirRandom(); //Insere valores randomicos na árvore
                 break;                    
             case 1:      
-                funcao.inserir();
-                break;
-            
+                funcao.inserir();       //Insere valores individuais na árvore
+                break;            
             case 2:
-                funcao.pesquisar();
-                break;
-            
+                funcao.pesquisar();     //pesquisa os valores individuais na arvore
+                break;       
             case 3:
-                funcao.excluir();
+                funcao.excluir();       //exclui valores individuais na arvore
                 break;
-            
             case 4:
-                funcao.valoresPreOrdem();
+                funcao.valoresPreOrdem();   //apresenta os valores em Pré-Ordem
                 break;
             case 5:
-                funcao.valoresPosOrdem();
+                funcao.valoresPosOrdem();   //apresenta os valores em Pós-Ordem
                 break;
             case 6:
-                funcao.valoresEmOrdem();
+                funcao.valoresEmOrdem();    //apresenta os valores em ordem 
         }
             
         } while(value != 7 || value > 7 );
