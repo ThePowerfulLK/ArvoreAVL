@@ -17,6 +17,12 @@ public class Funcao {
     Scanner scan =  new Scanner(System.in);
     int n1 = scan.nextInt();
     
+public void inserirRandom(){
+    for(int i = 0 ; i < 15 ; i++){
+                    
+                }
+}    
+ 
 public void inserir(){
     System.out.println("Informe o valor a ser INSERIDO: ");
     scan.nextInt();
@@ -26,12 +32,13 @@ public void inserir(){
 public void excluir(){
     System.out.println("Informe o valor a ser EXCLUIDO: ");
     scan.nextInt();
-    
+    valor.remover(n1);
 }
 
 public void pesquisar(){
     System.out.println("Informe o valor a ser PESQUISADO: ");
     scan.nextInt();
+    
 }
 
 public void valoresPreOrdem(){
@@ -41,6 +48,8 @@ public void valoresPreOrdem(){
 public void valoresPosOrdem(){
      System.out.println("");
 }
-
+public void valoresEmOrdem(){
+    System.out.println("");
+}
 
 }

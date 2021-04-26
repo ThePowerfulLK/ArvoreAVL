@@ -48,14 +48,14 @@ public class ArvoreAVL {
         setBalanceamento(atual);
 	int balanceamento = atual.getBalanceamento();
             if (balanceamento == -2) {
-            if (altura(atual.getEsquerda().getEsquerda()) >= altura(atual.getEsquerda().getDireita())) {
-                atual = rotacaoDireita(atual);
+            if (alturaNo(atual.getEsquerda().getEsquerda()) >= alturaNo(atual.getEsquerda().getDireita())) {
+                atual = roteDireita(atual);
 		} else {
                     atual = duplaRotacaoEsquerdaDireita(atual);
                         }
 		} else if (balanceamento == 2) {
-                    if (altura(atual.getDireita().getDireita()) >= altura(atual.getDireita().getEsquerda())) {
-			atual = rotacaoEsquerda(atual);
+                    if (alturaNo(atual.getDireita().getDireita()) >= alturaNo(atual.getDireita().getEsquerda())) {
+			atual = roteEsquerda(atual);
 			} else {
 			atual = duplaRotacaoDireitaEsquerda(atual);
                         	}       
@@ -117,7 +117,7 @@ public class ArvoreAVL {
                 remove = null;
 	}
     
-    public No rotacaoEsquerda(No inicial) {
+    public No roteEsquerda(No inicial) {
 
 	No direita = inicial.getDireita();
 	direita.setPai(inicial.getPai());
@@ -139,7 +139,7 @@ public class ArvoreAVL {
                     return direita;
     }
 
-    public No rotacaoDireita(No inicial) {
+    public No roteDireita(No inicial) {
 
 	No esquerda = inicial.getEsquerda();
 	esquerda.setPai(inicial.getPai());
@@ -162,13 +162,13 @@ public class ArvoreAVL {
 	}
 
     public No duplaRotacaoEsquerdaDireita(No inicial) {
-		inicial.setEsquerda(rotacaoEsquerda(inicial.getEsquerda()));
-		return rotacaoDireita(inicial);
+		inicial.setEsquerda(roteEsquerda(inicial.getEsquerda()));
+		return roteDireita(inicial);
 	}
 
     public No duplaRotacaoDireitaEsquerda(No inicial) {
-		inicial.setDireita(rotacaoDireita(inicial.getDireita()));
-		return rotacaoEsquerda(inicial);
+		inicial.setDireita(roteDireita(inicial.getDireita()));
+		return roteEsquerda(inicial);
 	}
 
     public No sucessor(No q) {
@@ -188,23 +188,23 @@ public class ArvoreAVL {
 		}
 	}
 
-    private int altura(No atual) {
+    private int alturaNo(No atual) {
         if (atual == null) {
             return -1;
 		}
 		if(atual.getEsquerda() == null && atual.getDireita() == null) {
                     return 0;
                         }else if(atual.getEsquerda() == null) {
-                            return 1 + altura(atual.getDireita());
+                            return 1 + alturaNo(atual.getDireita());
                                 }else if (atual.getDireita() == null) {
-                            return 1 + altura(atual.getEsquerda());	
+                            return 1 + alturaNo(atual.getEsquerda());	
                         }else{
-                    return 1 + Math.max(altura(atual.getEsquerda()), altura(atual.getDireita()));
+                    return 1 + Math.max(alturaNo(atual.getEsquerda()), alturaNo(atual.getDireita()));
 		}
 	}
 
     private void setBalanceamento(No no) {
-		no.setBalanceamento(altura(no.getDireita()) - altura(no.getEsquerda()));
+		no.setBalanceamento(alturaNo(no.getDireita()) - alturaNo(no.getEsquerda()));
 	}
 
     final protected ArrayList<No> inorder() {

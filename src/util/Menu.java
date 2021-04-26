@@ -22,7 +22,7 @@ public void menuArvore (){
     int valorRandom = aleatorio.nextInt();
     
     Scanner scan = new Scanner(System.in);
-    int value = 0;
+    int value;
     
         Funcao funcao = new Funcao();
     
@@ -36,7 +36,7 @@ public void menuArvore (){
         System.out.println("4 - Imprimir valores da árvore em pré ordem");
         System.out.println("5 - Imprimir valores da árvore em pós ordem");
         System.out.println("6 - Imprimir valores da árvore em ordem");
-        System.out.println("0 - Sair");
+        System.out.println("7 - Sair");
         
         System.out.print("Informe o valor : ");
         value = scan.nextInt();
@@ -44,11 +44,8 @@ public void menuArvore (){
         
         switch(value){
             case 0:
-                for(int i = 0 ; i < 15 ; i++){
-                    
-                }
-                    
-          
+                funcao.inserirRandom();
+                break;                    
             case 1:      
                 funcao.inserir();
                 break;
@@ -62,11 +59,16 @@ public void menuArvore (){
                 break;
             
             case 4:
-            
+                funcao.valoresPreOrdem();
                 break;
+            case 5:
+                funcao.valoresPosOrdem();
+                break;
+            case 6:
+                funcao.valoresEmOrdem();
         }
             
-        } while(value != 0 || value > 6 );
+        } while(value != 7 || value > 7 );
     
 }
     

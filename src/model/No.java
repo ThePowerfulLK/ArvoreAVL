@@ -19,7 +19,9 @@ public class No {
   
         
 	public No(int value) {
-		setEsquerda(setDireita(setPai(null)));
+		setEsquerda (null);
+                setDireita(null);
+                setPai(null);
 		setBalanceamento(0);
 		setChave(value);
 	}
@@ -48,18 +50,16 @@ public class No {
 		return pai;
 	}
 
-	public No setPai(No pai) {
+	public void setPai(No pai) {
         	this.pai = pai;
-		return pai;
 	}
 
 	public No getDireita() {
 		return direita;
 	}
 
-	public No setDireita(No direita) {
+	public void setDireita(No direita) {
 		this.direita = direita;
-		return direita;
 	}
 
 	public No getEsquerda() {
