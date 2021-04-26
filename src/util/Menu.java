@@ -5,6 +5,7 @@
  */
 package util;
 
+import java.util.Random;
 import java.util.Scanner;
 import model.ArvoreAVL;
 
@@ -17,6 +18,9 @@ public class Menu {
 public void menuArvore (){ 
     ArvoreAVL arvore = new ArvoreAVL();
     
+    Random aleatorio = new Random();
+    int valorRandom = aleatorio.nextInt();
+    
     Scanner scan = new Scanner(System.in);
     int value = 0;
     
@@ -25,6 +29,7 @@ public void menuArvore (){
     do{    
         System.out.println(" MENU ");
         System.out.println("");
+        System.out.println("0 - Informe a quantidade de valores dentro da árvore");
         System.out.println("1 - Inserir os valores dos nós");
         System.out.println("2 - Pesquisar");
         System.out.println("3 - Excluir");
@@ -39,7 +44,10 @@ public void menuArvore (){
         
         switch(value){
             case 0:
-                System.exit(0);
+                for(int i = 0 ; i < 15 ; i++){
+                    
+                }
+                    
           
             case 1:      
                 funcao.inserir();
