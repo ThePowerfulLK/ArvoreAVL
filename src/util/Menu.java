@@ -5,7 +5,6 @@
  */
 package util;
 
-import java.util.Random;
 import java.util.Scanner;
 import model.ArvoreAVL;
 
@@ -18,8 +17,6 @@ public class Menu {
 public void menuArvore (){ 
     ArvoreAVL arvore = new ArvoreAVL();
     
-    Random aleatorio = new Random();
-    int valorRandom = aleatorio.nextInt();
     
     Scanner scan = new Scanner(System.in);
     int value;

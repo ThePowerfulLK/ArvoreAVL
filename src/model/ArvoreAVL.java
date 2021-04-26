@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author Leo
  */
 public class ArvoreAVL {
- protected No raiz;
+ public No raiz;
 
     public void inserir(int value) {
         No n = new No(value);
@@ -48,6 +48,7 @@ public class ArvoreAVL {
         setBalanceamento(atual);
 	int balanceamento = atual.getBalanceamento();
             if (balanceamento == -2) {
+                if(atual.getDireita() == null){
             if (alturaNo(atual.getEsquerda().getEsquerda()) >= alturaNo(atual.getEsquerda().getDireita())) {
                 atual = roteDireita(atual);
 		} else {
@@ -66,6 +67,8 @@ public class ArvoreAVL {
                 	this.raiz = atual;
 		}
 	}
+        
+    }
         
     public void remover(int k) {
             removerAVL(this.raiz, k);
@@ -207,18 +210,20 @@ public class ArvoreAVL {
 		no.setBalanceamento(alturaNo(no.getDireita()) - alturaNo(no.getEsquerda()));
 	}
 
-    final protected ArrayList<No> inorder() {
-		ArrayList<No> no = new ArrayList<No>();
-		inorder(raiz, no);
-		return no;
-	}
+    public void preOrdem(No no){
+        if (no !=null){
+            System.out.println(no.getChave() + "");
+            preOrdem(no.getEsquerda());
+            preOrdem(no.getDireita());
+        }
+    }
+    
+    public void emOrdem(No no){
+        if(no != null){
+            emOrdem(no.getEsquerda());
+            System.out.println(no.getChave() + "");
+            emOrdem(no.getDireita());
+        }
+    }
 
-    final protected void inorder(No no, ArrayList<No> lista) {
-            if (no == null) {
-		return;
-		}
-            inorder(no.getEsquerda(), lista);
-            lista.add(no);
-            inorder(no.getDireita(), lista);
-	}
 }
