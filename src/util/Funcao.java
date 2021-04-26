@@ -11,4 +11,26 @@ package util;
  */
 public class Funcao {
     
+    
+public void inserir(){
+    
+}
+
+public void excluir(){
+    
+}
+
+public void pesquisar(){
+    
+}
+
+public void valoresPreOrdem(){
+    
+}
+
+public void valoresPosOrdem(){
+     
+}
+
+
 }

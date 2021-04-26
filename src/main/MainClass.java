@@ -10,11 +10,6 @@ import model.No;
 public class MainClass {
     public static void main(String[] args) {
        
-        ArvoreAVL arvore =  new ArvoreAVL();
-        
-        Scanner scan = new Scanner(System.in);
-        int value = 0;
-        
-        
+     
     }
 }
