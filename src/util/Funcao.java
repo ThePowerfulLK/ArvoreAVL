@@ -51,7 +51,7 @@ public void valoresPreOrdem(){
 
 public void valoresPosOrdem(){
      System.out.println("Valores em Pos Ordem");
-     
+     valor.posOrdem(valor.raiz);
 }
 public void valoresEmOrdem(){
     System.out.println("");

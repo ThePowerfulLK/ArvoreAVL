@@ -5,7 +5,6 @@
  */
 package model;
 
-import java.util.ArrayList;
 
 /**
  *
@@ -223,6 +222,14 @@ public class ArvoreAVL {
             emOrdem(no.getEsquerda());
             System.out.println(no.getChave() + "");
             emOrdem(no.getDireita());
+        }
+    }
+    
+    public void posOrdem(No no){
+        if(no != null){
+            posOrdem(no.getEsquerda());
+            posOrdem(no.getDireita());
+              System.out.println(no.getChave() + "");
         }
     }
 
