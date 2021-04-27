@@ -10,64 +10,62 @@ package model;
  * @author Leo
  */
 public class No {
-    
-        private No esquerda;
-	private No direita;
-	private No pai;
-	private int chave;
-	private int balanceamento;
-  
-        
-	public No(int value) {
-		setEsquerda (null);
-                setDireita(null);
-                setPai(null);
-		setBalanceamento(0);
-		setChave(value);
-	}
 
-	public String toString() {
-		return Integer.toString(getChave());
-	}
+    private No esquerda;
+    private No direita;
+    private No pai;
+    private int id;
+    private int equilibrar;
 
-	public int getChave() {
-		return chave;
-	}
+    public No(int value) {
+        setEsquerda(null);
+        setDireita(null);
+        setPai(null);
+        setEquilibrar(0);
+        setId(value);
+    }
 
-	public void setChave(int chave) {
-		this.chave = chave;
-	}
+    public String toString() {
+        return Integer.toString(getId());
+    }
 
-	public int getBalanceamento() {
-		return balanceamento;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setBalanceamento(int balanceamento) {
-		this.balanceamento = balanceamento;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public No getPai() {
-		return pai;
-	}
+    public int getEquilibrar() {
+        return equilibrar;
+    }
 
-	public void setPai(No pai) {
-        	this.pai = pai;
-	}
+    public void setEquilibrar(int equilibrar) {
+        this.equilibrar = equilibrar;
+    }
 
-	public No getDireita() {
-		return direita;
-	}
+    public No getPai() {
+        return pai;
+    }
 
-	public void setDireita(No direita) {
-		this.direita = direita;
-	}
+    public void setPai(No pai) {
+        this.pai = pai;
+    }
 
-	public No getEsquerda() {
-		return esquerda;
-	}
+    public No getDireita() {
+        return direita;
+    }
 
-	public void setEsquerda(No esquerda) {
-		this.esquerda = esquerda;
-	}
+    public void setDireita(No direita) {
+        this.direita = direita;
+    }
+
+    public No getEsquerda() {
+        return esquerda;
+    }
+
+    public void setEsquerda(No esquerda) {
+        this.esquerda = esquerda;
+    }
 }
-    

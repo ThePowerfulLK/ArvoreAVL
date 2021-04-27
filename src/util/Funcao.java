@@ -14,48 +14,54 @@ import model.ArvoreAVL;
  * @author Leo
  */
 public class Funcao {
+
     ArvoreAVL valor = new ArvoreAVL();
-    Scanner scan =  new Scanner(System.in);
+    Scanner scan = new Scanner(System.in);
     int n1 = scan.nextInt();
-    
-    
-public void inserirRandom(){
-    Random aleatorio = new Random();
-    for(int i = 0 ; i < 15 ; i++){
-        valor.inserir(aleatorio.nextInt(30));
-                }
-}    
- 
-public void inserir(){
-    System.out.println("Informe o valor a ser INSERIDO: ");
-    scan.nextInt();
-    valor.inserir(n1);
-}
 
-public void excluir(){
-    System.out.println("Informe o valor a ser EXCLUIDO: ");
-    scan.nextInt();
-    valor.remover(n1);
-}
+    public void inserirRandom() {
+        Random aleatorio = new Random();
+        for (int i = 0; i < 15; i++) {
+            valor.inserir(aleatorio.nextInt(30));
+        }
+    }
 
-public void pesquisar(){
-    System.out.println("Informe o valor a ser PESQUISADO: ");
-    scan.nextInt();
+    public void inserir() {
+        System.out.println("Informe o valor a ser INSERIDO: ");
+        scan.nextInt();
+        valor.inserir(n1);
+    }
 
-}
+    public void excluir() {
+        System.out.println("Informe o valor a ser EXCLUIDO: ");
+        scan.nextInt();
+        valor.remover(n1);
+    }
 
-public void valoresPreOrdem(){
-    System.out.println("Valores em Pre Ordem");
-    valor.preOrdem(valor.raiz);
-}
+    public void pesquisar() {
+        System.out.println("Informe o valor a ser PESQUISADO: ");
+        scan.nextInt();
+        if (valor.pesquisaNo(valor.raiz,) == null) {
+            System.out.println("Não encontrado");
+        } else {
+            System.out.println("Encontrado! ");
+        }
 
-public void valoresPosOrdem(){
-     System.out.println("Valores em Pos Ordem");
-     valor.posOrdem(valor.raiz);
-}
-public void valoresEmOrdem(){
-    System.out.println("");
-    valor.emOrdem(valor.raiz);
-}
+    }
+
+    public void valoresPreOrdem() {
+        System.out.println("Valores em Pre Ordem");
+        valor.preOrdem(valor.raiz);
+    }
+
+    public void valoresPosOrdem() {
+        System.out.println("Valores em Pos Ordem");
+        valor.posOrdem(valor.raiz);
+    }
+
+    public void valoresEmOrdem() {
+        System.out.println("");
+        valor.emOrdem(valor.raiz);
+    }
 
 }
