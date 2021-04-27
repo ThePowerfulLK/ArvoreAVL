@@ -12,6 +12,7 @@ public class MainClass {
 
         Menu menu = new Menu();
 
+        System.out.println("");
         menu.menuArvore();
 
     }

@@ -13,13 +13,21 @@ public class ArvoreAVL {
 
     public No raiz;
 
+    public ArvoreAVL() {
+        raiz = null;
+    }
+
+    public void newNo(No newNo) {
+        this.raiz = newNo;
+    }
+
     public void inserir(int value) {
         No n = new No(value);
         inserirAVL(this.raiz, n);
     }
 
-    public void remover(int k) {
-        removerAVL(this.raiz, k);
+    public void remover(int n) {
+        removerAVL(this.raiz, n);
     }
 
     public No pesquisaNo(No raiz, int id) {

@@ -25,7 +25,7 @@ public class Menu {
         do {
             System.out.println(" MENU ");
             System.out.println("");
-            System.out.println("0 - Informe a quantidade de valores dentro da árvore");
+            System.out.println("0 - Gerar valores randomicos");
             System.out.println("1 - Inserir os valores dos nós");
             System.out.println("2 - Pesquisar");
             System.out.println("3 - Excluir");
@@ -59,6 +59,8 @@ public class Menu {
                 case 6:
                     funcao.valoresEmOrdem();     //apresenta os valores em ordem 
                     break;
+                case 7:
+                    System.exit(0);
             }
 
         } while (value != 7 || value > 7);
